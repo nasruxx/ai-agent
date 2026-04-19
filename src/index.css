@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-[#fcfcfc] text-[#1a1a1a] antialiased font-sans transition-colors duration-300;
+  }
+}
+
+@layer components {
+  /* Design System Classes */
+  .app-sidebar {
+    @apply bg-white border-r border-[#eeeeee] w-[280px];
+  }
+
+  .clean-button-primary {
+    @apply bg-[#1a1a1a] text-white rounded-lg py-3 px-4 text-sm font-medium hover:bg-[#333] transition-colors;
+  }
+
+  .clean-button-ghost {
+    @apply text-[#444] hover:text-[#000] hover:bg-[#f0f0f0] rounded-md transition-all text-sm py-2 px-3;
+  }
+
+  .history-label {
+    @apply text-[11px] uppercase tracking-[1px] text-[#888] font-semibold mb-4 block;
+  }
+
+  .header-minimal {
+    @apply h-16 border-b border-[#eeeeee] bg-[#fcfcfc] px-10;
+  }
+
+  .chat-viewport-minimal {
+    @apply px-4 sm:px-10 md:px-20 lg:px-[100px] py-10 space-y-8;
+  }
+
+  .message-container {
+    @apply flex gap-4 max-w-full;
+  }
+
+  .avatar-minimal {
+    @apply w-8 h-8 rounded-[4px] flex-shrink-0 flex items-center justify-center text-[12px] font-bold;
+  }
+
+  .avatar-ai {
+    @apply bg-[#000] text-white;
+  }
+
+  .avatar-user {
+    @apply bg-[#e2e2e2] text-[#555];
+  }
+
+  .message-content-minimal {
+    @apply text-[15px] leading-[1.6] text-[#222] flex-1;
+  }
+
+  .input-area-gradient {
+    @apply bg-gradient-to-t from-[#fcfcfc] via-[#fcfcfc] to-transparent pt-10 pb-10 px-4 sm:px-[100px];
+  }
+
+  .input-container-minimal {
+    @apply bg-white border border-[#e5e5e5] rounded-xl p-4 shadow-[0_4px_12px_rgba(0,0,0,0.03)] flex items-center gap-3;
+  }
+
+  .tag-minimal {
+    @apply px-3 py-1.5 bg-[#f0f0f0] rounded-md text-[12px] text-[#666] hover:bg-[#e8e8e8] transition-colors;
+  }
+
+  /* Markdown overrides for minimalism */
+  .markdown-body {
+    @apply text-[15px] leading-[1.6] space-y-4;
+  }
+  
+  .markdown-body p {
+    @apply m-0;
+  }
+  
+  .markdown-body ul, .markdown-body ol {
+    @apply ml-5 space-y-2;
+  }
+  
+  .markdown-body code {
+    @apply bg-[#f0f0f0] px-1 py-0.5 rounded font-mono text-[13px] text-[#d1105a];
+  }
+  
+  .markdown-body pre {
+    @apply bg-[#fcfcfc] p-4 rounded-lg overflow-x-auto border border-[#eeeeee] my-4;
+  }
+}
+

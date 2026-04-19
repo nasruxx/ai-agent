@@ -1,0 +1,6 @@
+{
+  "name": "Aura AI Chat",
+  "description": "Agen chat AI yang responsif dan cerdas ditenagai oleh Gemini API.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": []
+}
